@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-01-12T07:53:04.943Z",
+    "end": "2025-01-12T07:53:23.235Z",
+    "duration": 18292,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "40a47193-a6ee-4e23-9d86-0a1b6a6e1d14",
+      "title": "",
+      "fullFile": "cypress\\e2e\\features\\dashboard.feature",
+      "file": "cypress\\e2e\\features\\dashboard.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1aaa9af2-ed9a-4cf3-a24b-c94de3ac2ff0",
+          "title": "User login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User can login with valid credentials",
+              "fullTitle": "User login User can login with valid credentials",
+              "timedOut": null,
+              "duration": 16230,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Envoyer un email' but never did.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find content: 'Envoyer un email' but never did.\n    at HTMLDocument.EnvoyerUnEmail (cypress/e2e/page_object/dashboard.js:4:78)",
+                "diff": null
+              },
+              "uuid": "4ac40587-1973-4adc-b18c-9d40841943be",
+              "parentUUID": "1aaa9af2-ed9a-4cf3-a24b-c94de3ac2ff0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4ac40587-1973-4adc-b18c-9d40841943be"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16230,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-report",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportFilename": "[status]_[datetime]-report",
+        "timestamp": "shortDate",
+        "charts": true,
+        "reportPageTitle": "Colispo Test Suite Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
