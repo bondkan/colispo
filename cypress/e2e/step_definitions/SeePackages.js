@@ -3,22 +3,24 @@ import dashboardelements from '../page_object/dashboard'
 import seePackagesElement from '../page_object/seePackages'
 
 beforeEach(() => {
-    cy.intercept('GET', 'https://maps.googleapis.com/maps-api-v3/api/js/59/8/map.js').as('mapsApi');
-    cy.intercept('GET', 'https://api.colispo.com/colis/trajet?trajet=677682bf39655332aa2b69ad').as('trajetApi');
+    cy.intercept('GET', 'https://maps.googleapis.com/maps/api/js*').as('mapsApi');
+    cy.intercept('GET', 'https://api.colispo.com/colis/trajet?trajet=67d1bb5542ef92169de36c09').as('trajetApi');
 });
 
 When(`I click on the see packages button`, () => {
     cy.wait(3000)
-    cy.get(dashboardelements.seePackages).click()
-    cy.wait(3000)
-    cy.get(seePackagesElement.seePackages).should('be.visible');
-    cy.wait(3000)
+    cy.get(seePackagesElement.seePackages).should('be.visible').click();
+    cy.log('Clicked on "See packages" button');
+    cy.wait(3000);
+    //cy.get(seePackagesElement.seePackages).should('be.visible');
+   // cy.wait(3000)
 
 });
 
 Then('I must verify the maps and packages', () => {
     cy.wait(5000)
-    cy.wait('@mapsApi').then((interception) => {
+    //cy.wait('@mapsApi').then((interception) => {
+        cy.wait('@mapsApi', { timeout: 10000 }).then((interception) => {
         expect(interception.response.statusCode).to.eq(200); // Vérifier le code 200 (OK)
     });
 
@@ -26,8 +28,6 @@ Then('I must verify the maps and packages', () => {
     cy.wait('@trajetApi').then((interception) => {
         expect(interception.response.statusCode).to.eq(200); 
     });
-    
-
 
 });
 

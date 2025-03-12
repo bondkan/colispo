@@ -25,10 +25,10 @@ When(`I enter the trip details`, () => {
     cy.wait(1000);
     cy.get(tripeelmets.clickArrivalCity).first().click();
 
-    cy.get(tripeelmets.DepartureDate).eq(0).type('2025-03-01')
+    cy.get(tripeelmets.DepartureDate).eq(0).type('2025-04-13')
     cy.get(tripeelmets.AmDepartureDate).click();
 
-    cy.get(tripeelmets.ArrivalDtae).eq(1).type('2025-03-07')
+    cy.get(tripeelmets.ArrivalDtae).eq(1).type('2025-04-14')
     cy.get(tripeelmets.PmArrivalDtae).click();
 
     cy.get(tripeelmets.avion).should('be.visible').click();
@@ -36,10 +36,10 @@ When(`I enter the trip details`, () => {
 
     cy.get(tripeelmets.PNR).should('be.visible')     
         .clear()                 
-        .type('123')           
+        .type('123456')           
     cy.wait(1000);
 
-    cy.get(tripeelmets.Flight_number).should('exist').type('150');
+    cy.get(tripeelmets.Flight_number).should('exist').type('123-0123456789');
     cy.wait(1000);
 
 

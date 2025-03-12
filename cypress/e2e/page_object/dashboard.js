@@ -8,11 +8,11 @@ const dashboardelements = {
     EnvoyerUnemail: '.pb-1', 
     ContactezNous: '.pb-1',
 
-    AjouterColis: ".nav-link:contains('Expédier un colis')",
+    ExpEdierColis: 'a.nav-link:contains("Expédier un colis")',
     //navpackage: 'a[href="/ajouterColis"]',
 
-    navAddAtrip: 'a[href="/proposerTrajet"]',
+    navAddAtrip: 'a.nav-link:contains("Proposer un trajet")',
 
-    seePackages: 'a[href="/voirColis"]:contains("Voir les annonces")',
+    seePackages: 'a.nav-link:contains("Voir les annonces")',
 };
 export default dashboardelements;

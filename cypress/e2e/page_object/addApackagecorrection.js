@@ -1,6 +1,6 @@
 const Packageelmets = {
-    navpackage: 'a[href="/ajouterColis"]',
-    box: '.ajouter-colis_FromBox__MTfnE',
+    navpackage: 'a.nav-link:contains("Expédier un colis")', // Sélecteur pour le bouton "Expédier un colis"
+    box: '.ajouter-colis_FromBox__MTfnE', // Sélecteur pour la boîte à vérifier
     qte: 'input[name="qte"]',
     name: 'input[name="title"]',
     length: 'input[name="length"]',

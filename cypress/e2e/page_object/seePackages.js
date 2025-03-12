@@ -1,6 +1,6 @@
 const seePackagesElement= {
 
-    seePackages: 'a[href="/voirColis"]',
+    seePackages: 'a.nav-link:contains("Voir les annonces")',
 
 };
 export default seePackagesElement;
