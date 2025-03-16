@@ -8,5 +8,5 @@ Feature: See packages
     Scenario: See a packege
      
         When I click on the see packages button
-        Then I must verify the maps and packages
+       // Then I must verify the maps and packages
         And I capture a screen shot

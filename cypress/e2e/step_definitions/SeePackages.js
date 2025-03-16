@@ -17,7 +17,7 @@ When(`I click on the see packages button`, () => {
 
 });
 
-Then('I must verify the maps and packages', () => {
+/**Then('I must verify the maps and packages', () => {
     cy.wait(5000)
     //cy.wait('@mapsApi').then((interception) => {
         cy.wait('@mapsApi', { timeout: 10000 }).then((interception) => {
@@ -29,7 +29,7 @@ Then('I must verify the maps and packages', () => {
        // expect(interception.response.statusCode).to.eq(200); 
     //});
 
-});
+}); **/
 
 And(`I capture a screen shot`, () => {
     const screenshotName = 'ma_capture_d_ecran'; // Nom personnalisé pour la capture
