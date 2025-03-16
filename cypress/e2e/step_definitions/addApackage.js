@@ -35,8 +35,8 @@ When(`I enter the package details`, () => {
     cy.wait(1000);
     cy.get(Packageelmets.clickarrive).first().click();
     
-    cy.get(Packageelmets.departdate).eq(0).type('2025-03-12')
-    cy.get(Packageelmets.arrivedate).eq(1).type('2025-03-13')
+    cy.get(Packageelmets.departdate).eq(0).type('2025-03-20')
+    cy.get(Packageelmets.arrivedate).eq(1).type('2025-03-22')
 
 
     cy.get(Packageelmets.submit2).click()

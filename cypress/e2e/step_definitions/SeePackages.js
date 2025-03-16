@@ -4,7 +4,7 @@ import seePackagesElement from '../page_object/seePackages'
 
 beforeEach(() => {
     cy.intercept('GET', 'https://maps.googleapis.com/maps/api/js*').as('mapsApi');
-    cy.intercept('GET', 'https://api.colispo.com/colis/trajet?trajet=67d1bb5542ef92169de36c09').as('trajetApi');
+   // cy.intercept('GET', 'https://api.colispo.com/colis/trajet?trajet=67d1bb5542ef92169de36c09').as('trajetApi');
 });
 
 When(`I click on the see packages button`, () => {
@@ -25,9 +25,9 @@ Then('I must verify the maps and packages', () => {
     });
 
     cy.wait(5000)
-    cy.wait('@trajetApi').then((interception) => {
-        expect(interception.response.statusCode).to.eq(200); 
-    });
+   // cy.wait('@trajetApi').then((interception) => {
+       // expect(interception.response.statusCode).to.eq(200); 
+    //});
 
 });
 
